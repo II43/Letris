@@ -1,0 +1,224 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_HARDDRIVE           ICON    DISCARDABLE     "\\Bmp\\UserHD.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "New\tF2",                     ID_NEWGAME
+        MENUITEM "&Load\tF3",                   ID_LOADGAME
+        MENUITEM "&Save\tF4",                   ID_SAVEGAME
+        MENUITEM "Options\tF5",                 ID_OPTIONS
+        MENUITEM "&Exit\tESC",                  ID_EXIT
+    END
+    MENUITEM "&Pause\tP",                   ID_PAUSE
+    MENUITEM "&About",                      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDA_TABLE ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "P",            ID_PAUSE,               VIRTKEY, NOINVERT
+    VK_ESCAPE,      ID_EXIT,                VIRTKEY, NOINVERT
+    VK_F1,          ID_APP_ABOUT,           VIRTKEY, NOINVERT
+    VK_F2,          ID_NEWGAME,             VIRTKEY, NOINVERT
+    VK_F3,          ID_LOADGAME,            VIRTKEY, NOINVERT
+    VK_F4,          ID_SAVEGAME,            VIRTKEY, NOINVERT
+    VK_F5,          ID_OPTIONS,             VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 171, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 11, "Gill Sans"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,56,46,14,WS_GROUP
+    CTEXT           "This is FREEWARE game",IDC_STATIC,43,27,120,10
+    CTEXT           "uTetris v1.0",IDC_STATIC,44,19,120,10
+    CONTROL         128,IDC_STATIC,"Static",SS_BITMAP,4,4,25,67
+END
+
+IDD_GAMEOPTIONS DIALOG DISCARDABLE  0, 0, 270, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,213,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,213,24,50,14
+    GROUPBOX        "Speed [1-1000]",IDC_STATIC,66,29,110,30,BS_FLAT
+    EDITTEXT        IDC_SPEEDEDIT,71,41,98,13,ES_AUTOHSCROLL
+    GROUPBOX        "Next Shape [Hex]",IDC_STATIC,65,65,110,30,BS_FLAT
+    EDITTEXT        IDC_NEXTSHAPEEDIT,71,77,98,13,ES_AUTOHSCROLL
+END
+
+IDD_SAVE DIALOG DISCARDABLE  0, 0, 211, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Save",IDOK,145,20,50,13
+    EDITTEXT        IDC_FILENAMEEDIT,22,20,121,12,ES_AUTOHSCROLL
+    GROUPBOX        "File:",IDC_STATIC,17,7,181,33
+END
+
+IDD_LOAD DIALOG DISCARDABLE  0, 0, 211, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Load",IDOK,145,20,50,13
+    EDITTEXT        IDC_FILENAMEEDIT,22,20,121,12,ES_AUTOHSCROLL
+    GROUPBOX        "File:",IDC_STATIC,17,7,181,33
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_NORMALFIELD         BITMAP  DISCARDABLE     "\\Bmp\\Normal.bmp"
+IDB_STONEFIELD          BITMAP  DISCARDABLE     "\\Bmp\\Stone.bmp"
+IDB_EMPTYFIELD          BITMAP  DISCARDABLE     "\\Bmp\\Empty.bmp"
+IDB_SPECIALFIELD_1      BITMAP  DISCARDABLE     "\\Bmp\\Special1.bmp"
+IDB_GAMEOVER            BITMAP  DISCARDABLE     "uTetris\\Bmp\\GameOver.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "uTetris\\Bmp\\Logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_GAMEOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_SAVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_LOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "About"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
